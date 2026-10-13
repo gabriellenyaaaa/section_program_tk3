@@ -1,3 +1,89 @@
-.h4 {
-    color-font: #000000;
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color:#000000
+}
+
+.header{
+    background-color: bisque;
+    display: flex;
+    border-top: 1px solid orange;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.logo {
+    width: 61px;
+    height: 61px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.hero {
+    background-color: lightblue;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid cornflowerblue;
+}
+
+.services {
+    background-color: lightyellow;
+    height: 350px;
+    border-top: 1px solid orange;
+}
+
+.judul {
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    padding-top: 20px;
+    width: 106px;
+    height: 56px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.services-content {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 100px;
+    margin-right: 40px;
+}
+
+.kolom {
+    width: 33.33%;
+}
+
+.kolom h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.kolom p {
+    line-height: 16px;
+    margin-bottom: 16px;
 }
