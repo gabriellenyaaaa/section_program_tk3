@@ -1,44 +1,43 @@
-body {
-    font-family: 'Times New Roman', Times, serif;
-    background: black;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+ body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    background-color: #f0f0f0;
 }
 
-.container {
-    background: whitesmoke;
-    padding: 20px;
-    width: 350px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+h1 {
+    color: #333;
 }
 
-input {
-    width: 70%;
-    padding: 8px;
+#display {
+    font-size: 40px;
+    margin: 20px;
+}
+
+#milliseconds {
+    font-size: 22px;
+    color: steelblue;
 }
 
 button {
-    padding: 8px;
+    padding: 10px 20px;
+    margin: 5px;
     cursor: pointer;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    background: #eee;
-    margin-top: 10PX;
-    padding: 8px;
-    display:flex;
-    justify-content: space-between;
+    border: none;
     border-radius: 5px;
 }
 
-.delete {
-    color: red;
-    cursor: pointer;
+.start {
+    background-color: green;
+    color: white;
+}
+
+.stop {
+    background-color: red;
+    color: white;
+}
+
+.reset {
+    background-color: gray;
+    color: white;
 }

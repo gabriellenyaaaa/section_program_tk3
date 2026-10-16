@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>list tugas</title>
+    <title>stopwatch</title>
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -20,16 +20,17 @@
 </head>
 
 <body>
-    <div class="container">
-        <H1>List Tugas</H1>
+    <h1>JavaScript Project</h1>
+    <h2>Stopwatch</h2><br>
 
-        <input type="text" id="taskInput" placeholder="Masukan tugasmu.....">
-        <button id="addBtn" onclick="addTask()">Tekan</button>
-
-        <ul id="taskList"></ul>
+    <div class="stopwatch">
+    <span id="display">00:00:00</span><span id="milliseconds">.00</span>
     </div>
-    
 
+    <button class="start" onclick="startTimer()">Start</button>
+    <button class="stop" onclick="stopTimer()">Stop</button>
+    <button class="reset" onclick="resetTimer()">Reset</button>
+    
 </body>
 
 </html>

@@ -1,45 +1,37 @@
-let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+let seconds = 0;
+let timer = null;
 
-function renderTasks() {
-    let list = document.getElementById("taskList");
-    list.innerHTML = "";
+function updateDisplay() {
+    let hours = Math.floor(seconds / 3600);
+    let minutes = Math.floor((seconds % 3600) / 60);
+    let secs = seconds % 60;
 
-    tasks.forEach((task, index) => {
-        let li = document.createElement("li");
-        li.innerHTML = `
-            ${task}
-            <span class="delete" onclick="deleteTask(${index})">X</span>
-        `;
-        list.appendChild(li);
-    });
+    document.getElementById("display").textContent =
+        String(hours).padStart(2, "0") + ":" +
+        String(minutes).padStart(2, "0") + ":" +
+        String(secs).padStart(2, "0");
+
+    document.getElementById("milliseconds").textContent =
+    "." + String(Math.floor((elapsedTime % 1000) / 10))
+    .padStart(2, "0");
 }
 
-function addTask() {
-    let input = document.getElementById("taskInput");
-    let task = input.value.trim();
+function startTimer() {
+    if (timer !== null) return;
 
-    if (task === "") {
-        alert("ISI SEK GOK!");
-        return;
-    }
-
-    tasks.push(task);
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-    input.value = "";
-    renderTasks();
+    timer = setInterval(function () {
+        seconds++;
+        updateDisplay();
+    }, 1000);
 }
 
-function deleteTask(index) {
-    tasks.splice(index, 1);
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-    renderTasks();
+function stopTimer() {
+    clearInterval(timer);
+    timer = null;
 }
 
-document.getElementById("taskInput").addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-        addTask();
-    }
-});
-
-
-renderTasks();
+function resetTimer() {
+    stopTimer();
+    seconds = 0;
+    updateDisplay();
+}
