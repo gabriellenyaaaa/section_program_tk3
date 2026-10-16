@@ -1,21 +1,45 @@
-function myFunction() {
-  let angka1 = parseFloat(prompt("Masukan angka 1 :"));
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-  let angka2 = parseFloat(prompt("Masukan angka 2 :"));
-  
-  let operator = prompt("Masukan tanda operasi (+, -, *, /) :");
+function renderTasks() {
+    let list = document.getElementById("taskList");
+    list.innerHTML = "";
 
-  let hasil;
-
-  if (operator === "+") {
-    hasil = angka1 + angka2;
-  } else if (operator === "-") {
-    hasil = angka1 - angka2;
-  } else if (operator === "*") {
-    hasil = angka1 * angka2
-  } else if (operator === "/") {
-    hasil = angka1 / angka2;
-  }
-
-  alert ("Hasil : " + hasil);
+    tasks.forEach((task, index) => {
+        let li = document.createElement("li");
+        li.innerHTML = `
+            ${task}
+            <span class="delete" onclick="deleteTask(${index})">X</span>
+        `;
+        list.appendChild(li);
+    });
 }
+
+function addTask() {
+    let input = document.getElementById("taskInput");
+    let task = input.value.trim();
+
+    if (task === "") {
+        alert("ISI SEK GOK!");
+        return;
+    }
+
+    tasks.push(task);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    input.value = "";
+    renderTasks();
+}
+
+function deleteTask(index) {
+    tasks.splice(index, 1);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    renderTasks();
+}
+
+document.getElementById("taskInput").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        addTask();
+    }
+});
+
+
+renderTasks();
