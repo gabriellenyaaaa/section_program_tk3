@@ -14,3 +14,6 @@
 - buat website statis seperti biasa
 - css pisah
 - one page scroll biasa
+
+## Latihan js 
+- klik button "Kirim Pesan"
