@@ -135,18 +135,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="card">
-                        <img src="assets/img/suga4.png" class="card-img-top" alt="Service 4">
-                        <div class="card-body">
-                            <h3 class="head">Service Four</h3>
-                            <p class="card-text">
-                                Deskripsi singkat layanan ketiga.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -325,10 +313,95 @@
 
 
     <script>
-    document.getElementById("copyright-year").textContent =
-        new Date().getFullYear();
-    </script>
+       document.addEventListener("DOMContentLoaded", function () {
+            const canvas = document.getElementById("skillsChart");
 
+            if (!canvas || typeof Chart === "undefined") return;
+
+            const ctx = canvas.getContext("2d");
+
+            // Gradasi cokelat ke abu-abu
+            const gradient = ctx.createLinearGradient(0, 0, 0, 320);
+            gradient.addColorStop(0, "#3b3028");
+            gradient.addColorStop(0.5, "#77685a");
+            gradient.addColorStop(1, "#c8b9a7");
+
+            new Chart(ctx, {
+                type: "bar",
+                data: {
+                labels: [
+                    "SongWriter",
+                    "Dance",
+                    "Code",
+                    "Music",
+                    "Basket",
+                    "Marry You"
+                ],
+                datasets: [{
+                    label: "Tingkat Kemampuan",
+                    data: [80, 90, 90, 80, 88, 100],
+                    backgroundColor: gradient,
+                    borderRadius: 9,
+                    borderSkipped: false,
+                    barPercentage: 0.58,
+                    categoryPercentage: 0.75
+                }]
+                },
+                options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                    display: false
+                    },
+                    tooltip: {
+                    backgroundColor: "#29231f",
+                    titleColor: "#ffffff",
+                    bodyColor: "#ffffff",
+                    callbacks: {
+                        label: function (context) {
+                        return context.parsed.y + "%";
+                        }
+                    }
+                    }
+                },
+                scales: {
+                    y: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        stepSize: 10,
+                        callback: function (value) {
+                        return value + "%";
+                        },
+                        color: "#766f69"
+                    },
+                    grid: {
+                        color: "#e8e3de"
+                    },
+                    border: {
+                        display: false
+                    }
+                    },
+                    x: {
+                    ticks: {
+                        color: "#766f69",
+                        maxRotation: 15,
+                        minRotation: 0
+                    },
+                    grid: {
+                        display: false
+                    },
+                    border: {
+                        color: "#d8d1ca"
+                    }
+                    }
+                }
+                }
+            });
+        });
+
+    </script>
 
 </body>
 
