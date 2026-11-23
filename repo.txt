@@ -1,0 +1,3 @@
+Link Repositori : https://github.com/gabriellenyaaaa/section_program_tk3.git
+Branch          : CobaSQL
+Nama Database   : suga_coba (file: suga_coba.sql)
