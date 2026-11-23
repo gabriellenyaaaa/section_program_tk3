@@ -15,5 +15,11 @@
 - css pisah
 - one page scroll biasa
 
-## Latihan js 
+## Latihan js1
 - klik button "Kirim Pesan"
+
+## Latihan js2 
+- to do list
+
+## Latihan js3
+- stopwatch 1 digit
