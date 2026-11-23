@@ -80,55 +80,10 @@ require_once "koneksi.php";
     include'about.php';
     ?>
 
-    <section id="contact">
-        <div class="container">
-            <div class="contact-card reveal">
-                <div class="text-center mb-4">
-                    <h2>Hubungi Saya</h2>
-                    <p class="text-muted">
-                        Punya pertanyaan atau ide? Kirim pesan kepada saya.
-                    </p>
-                </div>
+    <?php
+    include'contact.php';
+    ?>
 
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputName4">Nama</label>
-                            <input type="text"
-                                class="form-control"
-                                id="inputName4"
-                                placeholder="Nama kamu"
-                                required>
-                        </div>
-
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email"
-                                class="form-control"
-                                id="inputEmail4"
-                                placeholder="nama@email.com"
-                                required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputMessage">Pesan</label>
-                        <textarea class="form-control"
-                                id="inputMessage"
-                                placeholder="Tuliskan pesan kamu..."
-                                required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">
-                        Kirim Pesan
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-
-    
    <footer class="footer-section py-5">
         <div class="container text-center">
             <div class="mb-4">
@@ -150,98 +105,6 @@ require_once "koneksi.php";
             </p>
         </div>
     </footer>
-
-
-    <script>
-       document.addEventListener("DOMContentLoaded", function () {
-            const canvas = document.getElementById("skillsChart");
-
-            if (!canvas || typeof Chart === "undefined") return;
-
-            const ctx = canvas.getContext("2d");
-
-            // Gradasi abu-abu
-            const gradient = ctx.createLinearGradient(0, 0, 0, 320);
-            gradient.addColorStop(0, "#292C36");
-            gradient.addColorStop(0.5, "#848A98");
-            gradient.addColorStop(1, "#BDC2C7");
-
-            new Chart(ctx, {
-                type: "bar",
-                data: {
-                labels: [
-                    "SongWriter",
-                    "Dance",
-                    "Code",
-                    "Music",
-                    "Basket",
-                    "Marry You"
-                ],
-                datasets: [{
-                    label: "Tingkat Kemampuan",
-                    data: [80, 90, 90, 80, 88, 100],
-                    backgroundColor: gradient,
-                    borderRadius: 9,
-                    borderSkipped: false,
-                    barPercentage: 0.58,
-                    categoryPercentage: 0.75
-                }]
-                },
-                options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                    display: false
-                    },
-                    tooltip: {
-                    backgroundColor: "#292C36",
-                    titleColor: "#ffffff",
-                    bodyColor: "#ffffff",
-                    callbacks: {
-                        label: function (context) {
-                        return context.parsed.y + "%";
-                        }
-                    }
-                    }
-                },
-                scales: {
-                    y: {
-                    beginAtZero: true,
-                    max: 100,
-                    ticks: {
-                        stepSize: 10,
-                        callback: function (value) {
-                        return value + "%";
-                        },
-                        color: "#626A78"
-                    },
-                    grid: {
-                        color: "#E0E3E8"
-                    },
-                    border: {
-                        display: false
-                    }
-                    },
-                    x: {
-                    ticks: {
-                        color: "#626A78",
-                        maxRotation: 15,
-                        minRotation: 0
-                    },
-                    grid: {
-                        display: false
-                    },
-                    border: {
-                        color: "#BDC2C7"
-                    }
-                    }
-                }
-                }
-            });
-        });
-
-    </script>
 
 </body>
 

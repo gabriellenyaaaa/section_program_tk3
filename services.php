@@ -1,20 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "suga_coba";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
+// Menggunakan koneksi dari file koneksi.php
+require_once 'koneksi.php';
 
 $sql = "SELECT judul, deskripsi, gambar FROM services";
 $result = mysqli_query($conn, $sql);
-
-$conn->close();
 ?>
 
 <section id="container">
@@ -26,9 +15,8 @@ $conn->close();
         <div class="row services-grid">
 
             <?php
-            if ($result->num_rows > 0) {
-              // output data of each row
-              while($row = $result->fetch_assoc()) {
+            if (mysqli_num_rows($result) > 0) {
+              while($row = mysqli_fetch_assoc($result)) {
                 echo '
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">

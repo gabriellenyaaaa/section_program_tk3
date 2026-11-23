@@ -1,3 +1,24 @@
+<?php
+require_once 'koneksi.php';
+
+// Jika dipanggil dengan alamat "about.php?fetch_skills=1"
+if (isset($_GET['fetch_skills'])) {
+    header('Content-Type: application/json');
+    
+    $query = mysqli_query($conn, "SELECT nama_skill, nilai FROM skills");
+    $labels = [];
+    $data = [];
+
+    while ($row = mysqli_fetch_assoc($query)) {
+        $labels[] = $row['nama_skill'];
+        $data[] = (int)$row['nilai'];
+    }
+
+    echo json_encode(['labels' => $labels, 'data' => $data]);
+    exit; 
+}
+?>
+
 <section id="About" class="section-padding">
     <div class="container">
         <div class="row mb-5">
@@ -98,3 +119,98 @@
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const canvas = document.getElementById("skillsChart");
+
+        if (!canvas || typeof Chart === "undefined") return;
+
+        const ctx = canvas.getContext("2d");
+
+        // Gradasi abu-abu
+        const gradient = ctx.createLinearGradient(0, 0, 0, 320);
+        gradient.addColorStop(0, "#292C36");
+        gradient.addColorStop(0.5, "#848A98");
+        gradient.addColorStop(1, "#BDC2C7");
+
+        // Simpan grafik ke variabel skillsChart agar bisa di-update
+        const skillsChart = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: [],
+                datasets: [{
+                    label: "Tingkat Kemampuan",
+                    data: [],
+                    backgroundColor: gradient,
+                    borderRadius: 9,
+                    borderSkipped: false,
+                    barPercentage: 0.58,
+                    categoryPercentage: 0.75
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: "#292C36",
+                        titleColor: "#ffffff",
+                        bodyColor: "#ffffff",
+                        callbacks: {
+                            label: function (context) {
+                                return context.parsed.y + "%";
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            stepSize: 10,
+                            callback: function (value) {
+                                return value + "%";
+                            },
+                            color: "#626A78"
+                        },
+                        grid: {
+                            color: "#E0E3E8"
+                        },
+                        border: {
+                            display: false
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: "#626A78"
+                        }
+                    }
+                }
+            }
+        });
+
+        // Fungsi mengambil data terbaru dari database setiap 3 detik
+        function updateSkillsChart() {
+            fetch("about.php?fetch_skills=1")
+                .then(response => response.json())
+                .then(result => {
+                    skillsChart.data.labels = result.labels;
+                    skillsChart.data.datasets[0].data = result.data;
+                    skillsChart.update();
+                })
+                .catch(error => console.error("Gagal memuat data grafik:", error));
+        }
+
+        // Jalankan saat halaman dibuka, lalu ulangi tiap 3 detik
+        updateSkillsChart();
+        setInterval(updateSkillsChart, 3000);
+    });
+</script>
