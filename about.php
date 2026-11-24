@@ -231,6 +231,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
-
-<!-- JavaScript utama website -->
-<script src="assets/js/asset.js"></script>
