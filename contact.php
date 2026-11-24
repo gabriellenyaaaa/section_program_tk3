@@ -6,12 +6,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['ajax_contact'])) {
 
     $name    = trim($_POST['name'] ?? '');
     $email   = trim($_POST['email'] ?? '');
-    $subject = trim($_POST['subject'] ?? '');
     $message = trim($_POST['message'] ?? '');
 
-    if ($name !== '' && $email !== '' && $subject !== '' && $message !== '') {
-        $stmt = $conn->prepare("INSERT INTO contacts (name, email, subject, message) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $name, $email, $subject, $message);
+    if ($name !== '' && $email !== '' && $message !== '') {
+        $stmt = $conn->prepare("INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $name, $email, $message);
 
         if ($stmt->execute()) {
             echo json_encode([
@@ -77,16 +76,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['ajax_contact'])) {
                             <label for="contactEmail">Email Address</label>
                             <input class="form-control" id="contactEmail" name="email" type="email"
                                 placeholder="nama@email.com" required>
-                        </div>
-                        <div class="col-12 form-group">
-                            <label for="contactSubject">Subject</label>
-                            <select class="form-control" id="contactSubject" name="subject" required>
-                                <option value="" selected disabled>Pilih subjek pesan</option>
-                                <option value="General Message">General Message</option>
-                                <option value="Film Discussion">Film Discussion</option>
-                                <option value="Portfolio Feedback">Portfolio Feedback</option>
-                                <option value="Other">Other</option>
-                            </select>
                         </div>
                         <div class="col-12 form-group">
                             <label for="contactMessage">Your Message</label>
