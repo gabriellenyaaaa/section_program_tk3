@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
     var contactForm = document.getElementById("contactForm");
     var formStatus = document.getElementById("formStatus");
 

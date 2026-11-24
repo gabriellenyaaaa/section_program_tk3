@@ -279,7 +279,7 @@
     <script>
         
 <!-- Library Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script src="assets/js/chart.min.js"></script>
 
 <!-- JavaScript Grafik -->
 <script>
