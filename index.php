@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -21,10 +24,13 @@
         <div class="container">
             <a class="navbar-brand brand" href="#home">
                 <img class="brand-avatar" src="assets/img/ms.jpg" alt="">
-                <span><h3>MAKOTO SHINKAI</h3><small>CINEMATIC PORTFOLIO</small></span>
+                <span>
+                    <h3>MAKOTO SHINKAI</h3><small>CINEMATIC PORTFOLIO</small>
+                </span>
             </a>
 
-            <button class="navbar-toggler" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Buka navigasi">
+            <button class="navbar-toggler" type="button" aria-controls="mainNav" aria-expanded="false"
+                aria-label="Buka navigasi">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -53,7 +59,8 @@
                 <p class="eyebrow light">AN ANIMATED WORLD BY</p>
                 <h1>MAKOTO<br><em>SHINKAI</em></h1>
                 <p class="hero-kicker">ANIMATION FILM DIRECTOR</p>
-                <p class="hero-copy">Creating worlds beyond imagination through breathtaking visuals, beautiful landscapes, and unforgettable stories.</p>
+                <p class="hero-copy">Creating worlds beyond imagination through breathtaking visuals, beautiful
+                    landscapes, and unforgettable stories.</p>
                 <a class="btn hero-button" href="#films">EXPLORE MY WORKS <i class="bi bi-arrow-right"></i></a>
             </div>
             <!-- <div class="hero-caption">A JOURNEY THROUGH LIGHT, SKY &amp; EMOTION <span>01 — 06</span></div>
@@ -83,9 +90,14 @@
                     <div class="col-lg-7 about-copy">
                         <p class="eyebrow">ABOUT THE DIRECTOR</p>
                         <h2>Creating emotions<br>through <em>animation.</em></h2>
-                        <p class="about-lead"><strong>Makoto Shinkai</strong> adalah sutradara, penulis, dan animator asal Jepang yang lahir pada 1973 di Prefektur Nagano.</p>
-                        <p>Ia memulai debut film panjangnya melalui <em>The Place Promised in Our Early Days</em> (2004), setelah dikenal lewat film pendek <em>Voices of a Distant Star</em> (2002). Karya-karyanya dikenal melalui visual yang detail dan cerita yang dekat dengan emosi manusia.</p>
-                        <p>Langit, hujan, cahaya, lanskap kota, jarak, waktu, dan kenangan menjadi elemen penting dalam dunia sinematiknya.</p>
+                        <p class="about-lead"><strong>Makoto Shinkai</strong> adalah sutradara, penulis, dan animator
+                            asal Jepang yang lahir pada 1973 di Prefektur Nagano.</p>
+                        <p>Ia memulai debut film panjangnya melalui <em>The Place Promised in Our Early Days</em>
+                            (2004), setelah dikenal lewat film pendek <em>Voices of a Distant Star</em> (2002).
+                            Karya-karyanya dikenal melalui visual yang detail dan cerita yang dekat dengan emosi
+                            manusia.</p>
+                        <p>Langit, hujan, cahaya, lanskap kota, jarak, waktu, dan kenangan menjadi elemen penting dalam
+                            dunia sinematiknya.</p>
                         <div class="about-signature">A world painted with light.</div>
                     </div>
                 </div>
@@ -98,33 +110,52 @@
                 <div class="section-heading journey-heading">
                     <p class="eyebrow">FROM THE BEGINNING</p>
                     <h2>A creative <em>journey.</em></h2>
-                    <p class="section-lead">Beberapa tonggak perjalanan Makoto Shinkai dalam dunia animasi dan perfilman.</p>
+                    <p class="section-lead">Beberapa tonggak perjalanan Makoto Shinkai dalam dunia animasi dan
+                        perfilman.</p>
                 </div>
 
                 <div class="timeline">
                     <article class="timeline-item">
                         <span class="timeline-year">1973</span>
-                        <div><h3>Early beginnings</h3><p>Lahir di Prefektur Nagano, Jepang.</p></div>
+                        <div>
+                            <h3>Early beginnings</h3>
+                            <p>Lahir di Prefektur Nagano, Jepang.</p>
+                        </div>
                     </article>
                     <article class="timeline-item">
                         <span class="timeline-year">2002</span>
-                        <div><h3>Voices of a Distant Star</h3><p>Merilis film pendek yang ia kerjakan secara independen.</p></div>
+                        <div>
+                            <h3>Voices of a Distant Star</h3>
+                            <p>Merilis film pendek yang ia kerjakan secara independen.</p>
+                        </div>
                     </article>
                     <article class="timeline-item">
                         <span class="timeline-year">2004</span>
-                        <div><h3>The Place Promised in Our Early Days</h3><p>Merilis film panjang pertamanya.</p></div>
+                        <div>
+                            <h3>The Place Promised in Our Early Days</h3>
+                            <p>Merilis film panjang pertamanya.</p>
+                        </div>
                     </article>
                     <article class="timeline-item">
                         <span class="timeline-year">2007</span>
-                        <div><h3>5 Centimeters per Second</h3><p>Menghadirkan kisah episodik tentang jarak dan perubahan hubungan.</p></div>
+                        <div>
+                            <h3>5 Centimeters per Second</h3>
+                            <p>Menghadirkan kisah episodik tentang jarak dan perubahan hubungan.</p>
+                        </div>
                     </article>
                     <article class="timeline-item">
                         <span class="timeline-year">2013</span>
-                        <div><h3>The Garden of Words</h3><p>Memperkuat ciri visualnya melalui detail hujan dan suasana kota.</p></div>
+                        <div>
+                            <h3>The Garden of Words</h3>
+                            <p>Memperkuat ciri visualnya melalui detail hujan dan suasana kota.</p>
+                        </div>
                     </article>
                     <article class="timeline-item">
                         <span class="timeline-year">2016—2022</span>
-                        <div><h3>Global recognition</h3><p>Merilis Your Name., Weathering With You, dan Suzume untuk penonton dunia.</p></div>
+                        <div>
+                            <h3>Global recognition</h3>
+                            <p>Merilis Your Name., Weathering With You, dan Suzume untuk penonton dunia.</p>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -134,6 +165,7 @@
         <section class="style-section section-padding">
             <div class="container">
                 <div class="row align-items-center">
+
                     <div class="col-lg-5 style-copy">
                         <p class="eyebrow">VISUAL LANGUAGE</p>
                         <h2>A signature<br><em>style.</em></h2>
@@ -149,11 +181,12 @@
                             <h3>THE ELEMENTS OF HIS FILMS</h3>
 
                             <div class="chart-container">
-                                <div class="chart-bars" id="styleChartBars"></div>
+                                <canvas id="styleChart"></canvas>
                             </div>
 
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -164,33 +197,41 @@
                 <div class="section-heading contact-heading text-center">
                     <p class="eyebrow">GET IN TOUCH</p>
                     <h2>Let's start a <em>conversation.</em></h2>
-                    <p class="section-lead">Punya pertanyaan atau ingin berbagi cerita tentang karya Makoto Shinkai? Kirim pesan melalui formulir di bawah ini.</p>
+                    <p class="section-lead">Punya pertanyaan atau ingin berbagi cerita tentang karya Makoto Shinkai?
+                        Kirim pesan melalui formulir di bawah ini.</p>
                 </div>
 
                 <div class="contact-card row">
                     <div class="col-lg-5 contact-info">
                         <p class="eyebrow light">CONTACT INFORMATION</p>
                         <h3>Stories are better when they're shared.</h3>
-                        <p>Website ini dibuat sebagai portfolio fan-made untuk tujuan edukasi dan apresiasi terhadap karya Makoto Shinkai.</p>
-                        <div class="contact-detail"><i class="bi bi-envelope"></i><span>Gunakan formulir untuk mengirim pesan</span></div>
-                        <div class="contact-detail"><i class="bi bi-globe2"></i><span>Makoto Shinkai Fan Portfolio</span></div>
+                        <p>Website ini dibuat sebagai portfolio fan-made untuk tujuan edukasi dan apresiasi terhadap
+                            karya Makoto Shinkai.</p>
+                        <div class="contact-detail"><i class="bi bi-envelope"></i><span>Gunakan formulir untuk mengirim
+                                pesan</span></div>
+                        <div class="contact-detail"><i class="bi bi-globe2"></i><span>Makoto Shinkai Fan
+                                Portfolio</span></div>
                         <div class="contact-social">
                             <span>EXPLORE MORE</span>
-                            <a href="https://www.shinkaiworks.com/" target="_blank" rel="noopener noreferrer">OFFICIAL WORKS <i class="bi bi-arrow-up-right"></i></a>
+                            <a href="https://www.shinkaiworks.com/" target="_blank" rel="noopener noreferrer">OFFICIAL
+                                WORKS <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
 
                     <div class="col-lg-7 contact-form-wrap">
-                        <p class="form-intro">Isi detail di bawah ini untuk menyiapkan pesan. Semua kolom bertanda <span>*</span> wajib diisi.</p>
+                        <p class="form-intro">Isi detail di bawah ini untuk menyiapkan pesan. Semua kolom bertanda
+                            <span>*</span> wajib diisi.</p>
                         <form id="contactForm" class="contact-form">
                             <div class="row">
                                 <div class="col-md-6 form-group">
                                     <label for="contactName">Your Name</label>
-                                    <input class="form-control" id="contactName" name="name" type="text" placeholder="Masukkan nama kamu" required>
+                                    <input class="form-control" id="contactName" name="name" type="text"
+                                        placeholder="Masukkan nama kamu" required>
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for="contactEmail">Email Address</label>
-                                    <input class="form-control" id="contactEmail" name="email" type="email" placeholder="nama@email.com" required>
+                                    <input class="form-control" id="contactEmail" name="email" type="email"
+                                        placeholder="nama@email.com" required>
                                 </div>
                                 <div class="col-12 form-group">
                                     <label for="contactSubject">Subject</label>
@@ -204,13 +245,17 @@
                                 </div>
                                 <div class="col-12 form-group">
                                     <label for="contactMessage">Your Message</label>
-                                    <textarea class="form-control" id="contactMessage" name="message" rows="5" placeholder="Tuliskan pesan kamu di sini..." required></textarea>
+                                    <textarea class="form-control" id="contactMessage" name="message" rows="5"
+                                        placeholder="Tuliskan pesan kamu di sini..." required></textarea>
                                 </div>
                                 <div class="col-12 d-flex flex-column flex-sm-row align-items-sm-center">
-                                    <button class="btn btn-contact-submit" type="submit">SEND MESSAGE <i class="bi bi-arrow-right"></i></button>
+                                    <button class="btn btn-contact-submit" type="submit">SEND MESSAGE <i
+                                            class="bi bi-arrow-right"></i></button>
                                     <!-- <span class="form-note">Formulir demo · Pesan tidak dikirim otomatis</span> -->
                                 </div>
-                                <div class="col-12"><p id="formStatus" class="form-status" role="status" aria-live="polite"></p></div>
+                                <div class="col-12">
+                                    <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -231,55 +276,132 @@
     </footer>
 
     <!-- JavaScript Grafik -->
+    <script>
+        
+<!-- Library Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+<!-- JavaScript Grafik -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    const chartData = [
-        { label: "Langit & cahaya", value: 95 },
-        { label: "Hujan", value: 82 },
-        { label: "Perjalanan", value: 88 },
-        { label: "Kenangan", value: 90 },
-        { label: "Hubungan", value: 85 }
-    ];
+    const canvas = document.getElementById("styleChart");
 
-    const chartBars = document.getElementById("styleChartBars");
+    if (canvas && typeof Chart !== "undefined") {
 
-    if (chartBars) {
+        const ctx = canvas.getContext("2d");
 
-        chartData.forEach(function (item) {
+        // Gradasi warna biru
+        const gradient = ctx.createLinearGradient(0, 0, 0, 350);
 
-            const row = document.createElement("div");
-            row.className = "chart-row";
+        gradient.addColorStop(0, "#368bc0");
+        gradient.addColorStop(1, "#9bd8f5");
 
-            const label = document.createElement("span");
-            label.textContent = item.label;
+        // Membuat grafik
+        new Chart(ctx, {
+            type: "bar",
 
-            const track = document.createElement("div");
-            track.className = "chart-track";
+            data: {
+                labels: [
+                    "Langit & cahaya",
+                    "Hujan",
+                    "Perjalanan",
+                    "Kenangan",
+                    "Hubungan"
+                ],
 
-            const fill = document.createElement("div");
-            fill.className = "chart-fill";
-            fill.style.width = item.value + "%";
+                datasets: [{
+                    label: "Elemen Visual",
+                    data: [95, 82, 88, 90, 85],
 
-            const value = document.createElement("strong");
-            value.textContent = item.value + "%";
+                    backgroundColor: gradient,
 
-            track.appendChild(fill);
+                    borderRadius: 5,
 
-            row.appendChild(label);
-            row.appendChild(track);
-            row.appendChild(value);
+                    borderSkipped: false,
 
-            chartBars.appendChild(row);
+                    barPercentage: 0.55,
 
+                    categoryPercentage: 0.75
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.parsed.y + "%";
+                            }
+                        }
+                    }
+                },
+
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+
+                        ticks: {
+                            stepSize: 20,
+
+                            color: "#b8c5d3",
+
+                            callback: function(value) {
+                                return value + "%";
+                            }
+                        },
+
+                        grid: {
+                            color: "rgba(255,255,255,0.12)"
+                        },
+
+                        border: {
+                            display: false
+                        }
+                    },
+
+                    x: {
+                        ticks: {
+                            color: "#b8c5d3",
+                            font: {
+                                size: 12
+                            }
+                        },
+
+                        grid: {
+                            display: false
+                        },
+
+                        border: {
+                            display: false
+                        }
+                    }
+                }
+            }
         });
-
     }
 
 });
 </script>
 
+<!-- JavaScript utama website -->
 <script src="assets/js/asset.js"></script>
 
 </body>
+</html>
+
+    </script>
+
+    <script src="assets/js/asset.js"></script>
+
+</body>
+
 </html>
