@@ -68,104 +68,7 @@
             </div>
         </section>
 
-        <!-- Filmography: urutan kartu mengikuti nama file 1.jpg sampai 6.jpg -->
-        <section class="section-padding films-section" id="films">
-            <div class="container">
-                <div class="section-heading d-flex flex-column flex-md-row justify-content-between align-items-md-end">
-                    <div>
-                        <p class="eyebrow">SELECTED FILMOGRAPHY</p>
-                        <h2>Stories that<br><em>stay with us.</em></h2>
-                    </div>
-                    <!-- <p class="section-lead">Menjelajahi dunia yang dibangun melalui animasi, perjalanan, kenangan, dan hubungan antarmanusia.</p> -->
-                </div>
-
-                <div class="row film-grid">
-                    <div class="col-md-6 col-lg-4">
-                        <article class="film-card">
-                            <div class="film-poster">
-                                <img src="assets/img/1.jpg" alt="Poster film Your Name">
-                                <span class="film-number">01</span>
-                            </div>
-                            <div class="film-info">
-                                <div class="film-meta"><span>2016</span><span>ROMANCE · FANTASY</span></div>
-                                <h3>Your Name.</h3>
-                                <p>Dua remaja terhubung melalui mimpi dan pertukaran tubuh dalam kisah tentang takdir dan waktu.</p>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <article class="film-card">
-                            <div class="film-poster">
-                                <img src="assets/img/2.jpg" alt="Poster film Weathering With You">
-                                <span class="film-number">02</span>
-                            </div>
-                            <div class="film-info">
-                                <div class="film-meta"><span>2019</span><span>ROMANCE · FANTASY</span></div>
-                                <h3>Weathering With You</h3>
-                                <p>Di tengah hujan Tokyo, seorang pemuda bertemu gadis yang dipercaya mampu menghadirkan cuaca cerah.</p>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <article class="film-card">
-                            <div class="film-poster">
-                                <img src="assets/img/3.jpg" alt="Poster film Suzume">
-                                <span class="film-number">03</span>
-                            </div>
-                            <div class="film-info">
-                                <div class="film-meta"><span>2022</span><span>ADVENTURE · FANTASY</span></div>
-                                <h3>Suzume</h3>
-                                <p>Perjalanan melintasi Jepang untuk menutup pintu-pintu misterius yang membawa bencana.</p>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <article class="film-card">
-                            <div class="film-poster">
-                                <img src="assets/img/4.jpg" alt="Poster film 5 Centimeters per Second">
-                                <span class="film-number">04</span>
-                            </div>
-                            <div class="film-info">
-                                <div class="film-meta"><span>2007</span><span>DRAMA · ROMANCE</span></div>
-                                <h3>5 Centimeters per Second</h3>
-                                <p>Kisah tentang jarak, kenangan, dan hubungan yang berubah perlahan seiring berjalannya waktu.</p>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <article class="film-card">
-                            <div class="film-poster">
-                                <img src="assets/img/5.jpg" alt="Poster film The Garden of Words">
-                                <span class="film-number">05</span>
-                            </div>
-                            <div class="film-info">
-                                <div class="film-meta"><span>2013</span><span>DRAMA · ROMANCE</span></div>
-                                <h3>The Garden of Words</h3>
-                                <p>Pertemuan dua orang asing di sebuah taman saat hujan, yang perlahan menjadi ruang untuk saling memahami.</p>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <article class="film-card">
-                            <div class="film-poster">
-                                <img src="assets/img/6.jpg" alt="Poster film Children Who Chase Lost Voices">
-                                <span class="film-number">06</span>
-                            </div>
-                            <div class="film-info">
-                                <div class="film-meta"><span>2011</span><span>ADVENTURE · FANTASY</span></div>
-                                <h3>Children Who Chase Lost Voices</h3>
-                                <p>Petualangan menuju dunia tersembunyi yang mengeksplorasi kehilangan dan keberanian untuk melangkah.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php include 'film.php'; ?>
 
         <!-- Tentang sutradara -->
         <section class="about-section section-padding" id="about">
@@ -234,14 +137,21 @@
                     <div class="col-lg-5 style-copy">
                         <p class="eyebrow">VISUAL LANGUAGE</p>
                         <h2>A signature<br><em>style.</em></h2>
-                        <p>Karya Makoto Shinkai memiliki pendekatan visual dan tema yang khas. Grafik berikut merupakan interpretasi editorial, bukan penilaian resmi.</p>
+                        <p>
+                            Karya Makoto Shinkai memiliki pendekatan visual
+                            dan tema yang khas. Grafik berikut merupakan
+                            interpretasi editorial, bukan penilaian resmi.
+                        </p>
                     </div>
+
                     <div class="col-lg-7">
                         <div class="chart-card">
                             <h3>THE ELEMENTS OF HIS FILMS</h3>
+
                             <div class="chart-container">
-                                <canvas id="styleChart" role="img" aria-label="Grafik elemen khas film Makoto Shinkai"></canvas>
+                                <div class="chart-bars" id="styleChartBars"></div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -320,7 +230,56 @@
         </div>
     </footer>
 
-    <script src="assets/js/chart.min.js"></script>
-    <script src="assets/js/asset.js"></script>
+    <!-- JavaScript Grafik -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const chartData = [
+        { label: "Langit & cahaya", value: 95 },
+        { label: "Hujan", value: 82 },
+        { label: "Perjalanan", value: 88 },
+        { label: "Kenangan", value: 90 },
+        { label: "Hubungan", value: 85 }
+    ];
+
+    const chartBars = document.getElementById("styleChartBars");
+
+    if (chartBars) {
+
+        chartData.forEach(function (item) {
+
+            const row = document.createElement("div");
+            row.className = "chart-row";
+
+            const label = document.createElement("span");
+            label.textContent = item.label;
+
+            const track = document.createElement("div");
+            track.className = "chart-track";
+
+            const fill = document.createElement("div");
+            fill.className = "chart-fill";
+            fill.style.width = item.value + "%";
+
+            const value = document.createElement("strong");
+            value.textContent = item.value + "%";
+
+            track.appendChild(fill);
+
+            row.appendChild(label);
+            row.appendChild(track);
+            row.appendChild(value);
+
+            chartBars.appendChild(row);
+
+        });
+
+    }
+
+});
+</script>
+
+<script src="assets/js/asset.js"></script>
+
 </body>
 </html>
