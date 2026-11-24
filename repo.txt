@@ -1,0 +1,45 @@
+====================================================================
+INFORMASI REPOSITORI & PROYEK WEB-PHP
+====================================================================
+
+Nama            : Gabriella Enya Setya Gratias
+NIM             : 20246030
+Kelas           : TRMK-3A
+
+Link Repositori : https://github.com/gabriellenyaaaa/section_program_tk3.git
+Branch Aktif    : Web-PHP
+Nama Database   : makoto_db
+File SQL        : makoto_db.sql (tersedia di root folder repositori)
+
+====================================================================
+DESKRIPSI & FUNGSI WEBSITE
+====================================================================
+Website "Makoto Shinkai - Cinematic Portfolio" adalah aplikasi web 
+berbasis PHP, MySQL, Bootstrap, dan JavaScript yang berfungsi sebagai 
+media informasi, katalog karya, serta ruang interaksi bagi penggemar 
+animasi karya sutradara Jepang, Makoto Shinkai.
+
+Fungsi Utama Website:
+1. Profil & Perjalanan Karier Sutradara (Section Home, About, & Journey)
+   - Memperkenalkan latar belakang Makoto Shinkai serta tonggak sejarah 
+     karya-karyanya dari tahun 1973 hingga 2022 secara terstruktur dan 
+     responsif di berbagai ukuran layar (desktop maupun mobile).
+
+2. Katalog Filmografi Dinamis (Section Filmography - film.php)
+   - Menampilkan daftar film pilihan beserta poster, tahun rilis, genre, 
+     dan sinopsis yang ditarik langsung dari tabel `films` di database 
+     MySQL, sehingga data film mudah ditambah atau diperbarui tanpa 
+     mengubah kode HTML.
+
+3. Visualisasi Elemen Khas Film Secara Realtime (Section Style - about.php)
+   - Menyajikan grafik batang interaktif (Chart.js) yang memvisualisasikan 
+     persentase elemen khas dalam film Makoto Shinkai (seperti langit & 
+     cahaya, hujan, perjalanan, kenangan, dan hubungan) berdasarkan data 
+     numerik dari tabel `style_elements` yang diperbarui secara realtime 
+     setiap 3 detik tanpa perlu me-refresh halaman.
+
+4. Formulir Interaksi & Penyimpanan Pesan (Section Contact - contact.php)
+   - Menyediakan sarana bagi pengunjung untuk mengirim pertanyaan, diskusi 
+     film, atau masukan secara langsung yang divalidasi di sisi klien 
+     (JavaScript) dan disimpan secara aman ke tabel `contacts` di database 
+     menggunakan PHP Prepared Statement.
