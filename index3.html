@@ -1,421 +1,325 @@
 <!DOCTYPE html>
-<html  lang="id">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Personal Portfolio</title>
+    <meta name="description" content="Portfolio fan-made tentang film dan perjalanan kreatif Makoto Shinkai.">
+    <title>Makoto Shinkai | Cinematic Portfolio</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-    <script src="assets/js/asset.js"></script>
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <!-- Navigasi utama -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-navbar">
+        <div class="container">
+            <a class="navbar-brand brand" href="#home">
+                <img class="brand-avatar" src="assets/img/ms.jpg" alt="">
+                <span>MAKOTO SHINKAI<small>CINEMATIC PORTFOLIO</small></span>
+            </a>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
-            <img class="logo-brand"
-                src="assets/img/suga3.png"
-                alt="Foto profil">
-
-            <a class="navbar-brand" href="#">Agust D</a>
-
-            <button class="navbar-toggler" type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Buka navigasi">
+            <button class="navbar-toggler" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Buka navigasi">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#container">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#About">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ml-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#films">Filmography</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
+                <a class="nav-cta ml-lg-4" href="#films">EXPLORE FILMS <i class="bi bi-arrow-up-right"></i></a>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <section class="hero-video-section">
-        <div class="hero-video-wrap">
-            <video class="hero-video" autoplay muted loop preload="auto" playsinline aria-label="Video Sugavid">
-                <source src="assets/sugavid.mp4" type="video/mp4">
+    <main>
+        <!-- Hero: ganti vid.mp4 untuk memperbarui video utama -->
+        <section class="hero" id="home">
+            <video class="hero-video" autoplay muted loop playsinline aria-label="Video suasana film Makoto Shinkai">
+                <source src="vid.mp4" type="video/mp4">
                 Browser Anda tidak mendukung pemutaran video.
             </video>
-            <h1 class="hero-video-title">Agust D</h1>
-        </div>
-    </section>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <p class="eyebrow light">AN ANIMATED WORLD BY</p>
+                <h1>MAKOTO<br><em>SHINKAI</em></h1>
+                <p class="hero-kicker">ANIMATION FILM DIRECTOR</p>
+                <p class="hero-copy">Creating worlds beyond imagination through breathtaking visuals, beautiful landscapes, and unforgettable stories.</p>
+                <a class="btn hero-button" href="#films">EXPLORE MY WORKS <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="hero-caption">A JOURNEY THROUGH LIGHT, SKY &amp; EMOTION <span>01 — 06</span></div>
+            <a class="scroll-indicator" href="#films"><span></span> SCROLL TO EXPLORE</a>
+        </section>
 
+        <!-- Kutipan pembuka -->
+        <section class="intro-strip">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                <p class="eyebrow mb-0">THE ART OF STORYTELLING</p>
+                <p class="intro-quote mb-0">“Every frame can hold a feeling, and every story can become a memory.”</p>
+            </div>
+        </section>
 
-
-    <section id="container">
-        <div class="judul-services">
-            <h2>Services</h2>
-        </div>
-
-        <div class="container">
-            <div class="row services-grid">
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="assets/img/suga4.png" class="card-img-top" alt="Service 1">
-                        <div class="card-body">
-                            <h3 class="head">Music Production</h3>
-                            <p class="card-text">
-                                Memproduksi lagu dari awal hingga akhir, menentukan arah musik, dan aransemen instrumen.
-                            </p>
-                        </div>
+        <!-- Filmography: urutan kartu mengikuti nama file 1.jpg sampai 6.jpg -->
+        <section class="section-padding films-section" id="films">
+            <div class="container">
+                <div class="section-heading d-flex flex-column flex-md-row justify-content-between align-items-md-end">
+                    <div>
+                        <p class="eyebrow">SELECTED FILMOGRAPHY</p>
+                        <h2>Stories that<br><em>stay with us.</em></h2>
                     </div>
+                    <p class="section-lead">Menjelajahi dunia yang dibangun melalui animasi, perjalanan, kenangan, dan hubungan antarmanusia.</p>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="assets/img/suga7.png" class="card-img-top" alt="Service 2">
-                        <div class="card-body">
-                            <h3 class="head">Songwriting</h3>
-                            <p class="card-text">
-                                Menulis lirik lagu yang bercerita (storytelling), menyentuh isu sosial, kesehatan mental, dan refleksi diri.
-                            </p>
-                        </div>
+                <div class="row film-grid">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="film-card">
+                            <div class="film-poster">
+                                <img src="assets/img/1.jpg" alt="Poster film Your Name">
+                                <span class="film-number">01</span>
+                            </div>
+                            <div class="film-info">
+                                <div class="film-meta"><span>2016</span><span>ROMANCE · FANTASY</span></div>
+                                <h3>Your Name.</h3>
+                                <p>Dua remaja terhubung melalui mimpi dan pertukaran tubuh dalam kisah tentang takdir dan waktu.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="film-card">
+                            <div class="film-poster">
+                                <img src="assets/img/2.jpg" alt="Poster film Weathering With You">
+                                <span class="film-number">02</span>
+                            </div>
+                            <div class="film-info">
+                                <div class="film-meta"><span>2019</span><span>ROMANCE · FANTASY</span></div>
+                                <h3>Weathering With You</h3>
+                                <p>Di tengah hujan Tokyo, seorang pemuda bertemu gadis yang dipercaya mampu menghadirkan cuaca cerah.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="film-card">
+                            <div class="film-poster">
+                                <img src="assets/img/3.jpg" alt="Poster film Suzume">
+                                <span class="film-number">03</span>
+                            </div>
+                            <div class="film-info">
+                                <div class="film-meta"><span>2022</span><span>ADVENTURE · FANTASY</span></div>
+                                <h3>Suzume</h3>
+                                <p>Perjalanan melintasi Jepang untuk menutup pintu-pintu misterius yang membawa bencana.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="film-card">
+                            <div class="film-poster">
+                                <img src="assets/img/4.jpg" alt="Poster film 5 Centimeters per Second">
+                                <span class="film-number">04</span>
+                            </div>
+                            <div class="film-info">
+                                <div class="film-meta"><span>2007</span><span>DRAMA · ROMANCE</span></div>
+                                <h3>5 Centimeters per Second</h3>
+                                <p>Kisah tentang jarak, kenangan, dan hubungan yang berubah perlahan seiring berjalannya waktu.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="film-card">
+                            <div class="film-poster">
+                                <img src="assets/img/5.jpg" alt="Poster film The Garden of Words">
+                                <span class="film-number">05</span>
+                            </div>
+                            <div class="film-info">
+                                <div class="film-meta"><span>2013</span><span>DRAMA · ROMANCE</span></div>
+                                <h3>The Garden of Words</h3>
+                                <p>Pertemuan dua orang asing di sebuah taman saat hujan, yang perlahan menjadi ruang untuk saling memahami.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="film-card">
+                            <div class="film-poster">
+                                <img src="assets/img/6.jpg" alt="Poster film Children Who Chase Lost Voices">
+                                <span class="film-number">06</span>
+                            </div>
+                            <div class="film-info">
+                                <div class="film-meta"><span>2011</span><span>ADVENTURE · FANTASY</span></div>
+                                <h3>Children Who Chase Lost Voices</h3>
+                                <p>Petualangan menuju dunia tersembunyi yang mengeksplorasi kehilangan dan keberanian untuk melangkah.</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="assets/img/suga6.png" class="card-img-top" alt="Service 3">
-                        <div class="card-body">
-                            <h3 class="head">Rapping</h3>
-                            <p class="card-text">
-                                Menyediakan vokal rap dengan berbagai teknik (mulai dari fast rap hingga emotional tone).
-                            </p>
+        <!-- Tentang sutradara -->
+        <section class="about-section section-padding" id="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="portrait-wrap">
+                            <img src="assets/img/ms.jpg" alt="Potret Makoto Shinkai">
+                            <span class="portrait-label">THE CREATOR<br>BEHIND THE FRAMES</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="assets/img/suga8.png" class="card-img-top" alt="Service 4">
-                        <div class="card-body">
-                            <h3 class="head">Live Performance</h3>
-                            <p class="card-text">
-                                Membawakan karya musik secara langsung dengan energi dan karakter yang kuat.
-                            </p>
-                        </div>
+                    <div class="col-lg-7 about-copy">
+                        <p class="eyebrow">ABOUT THE DIRECTOR</p>
+                        <h2>Creating emotions<br>through <em>animation.</em></h2>
+                        <p class="about-lead"><strong>Makoto Shinkai</strong> adalah sutradara, penulis, dan animator asal Jepang yang lahir pada 1973 di Prefektur Nagano.</p>
+                        <p>Ia memulai debut film panjangnya melalui <em>The Place Promised in Our Early Days</em> (2004), setelah dikenal lewat film pendek <em>Voices of a Distant Star</em> (2002). Karya-karyanya dikenal melalui visual yang detail dan cerita yang dekat dengan emosi manusia.</p>
+                        <p>Langit, hujan, cahaya, lanskap kota, jarak, waktu, dan kenangan menjadi elemen penting dalam dunia sinematiknya.</p>
+                        <div class="about-signature">A world painted with light.</div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="assets/img/suga2.png" class="card-img-top" alt="Service 5">
-                        <div class="card-body">
-                            <h3 class="head">Audio Production</h3>
-                            <p class="card-text">
-                                Menyelaraskan berbagai instrumen dan vokal agar terdengar seimbang dan jernih.
-                            </p>
-                        </div>
-                    </div>
+        <!-- Perjalanan karier -->
+        <section class="journey-section section-padding" id="journey">
+            <div class="container">
+                <div class="section-heading journey-heading">
+                    <p class="eyebrow">FROM THE BEGINNING</p>
+                    <h2>A creative <em>journey.</em></h2>
+                    <p class="section-lead">Beberapa tonggak perjalanan Makoto Shinkai dalam dunia animasi dan perfilman.</p>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="assets/img/suga3.png" class="card-img-top" alt="Service 6">
-                        <div class="card-body">
-                            <h3 class="head">Media Hosting</h3>
-                            <p class="card-text">
-                                Menyediakan platform untuk mendistribusikan dan mempromosikan karya musik.
-                            </p>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <span class="timeline-year">1973</span>
+                        <div><h3>Early beginnings</h3><p>Lahir di Prefektur Nagano, Jepang.</p></div>
+                    </article>
+                    <article class="timeline-item">
+                        <span class="timeline-year">2002</span>
+                        <div><h3>Voices of a Distant Star</h3><p>Merilis film pendek yang ia kerjakan secara independen.</p></div>
+                    </article>
+                    <article class="timeline-item">
+                        <span class="timeline-year">2004</span>
+                        <div><h3>The Place Promised in Our Early Days</h3><p>Merilis film panjang pertamanya.</p></div>
+                    </article>
+                    <article class="timeline-item">
+                        <span class="timeline-year">2007</span>
+                        <div><h3>5 Centimeters per Second</h3><p>Menghadirkan kisah episodik tentang jarak dan perubahan hubungan.</p></div>
+                    </article>
+                    <article class="timeline-item">
+                        <span class="timeline-year">2013</span>
+                        <div><h3>The Garden of Words</h3><p>Memperkuat ciri visualnya melalui detail hujan dan suasana kota.</p></div>
+                    </article>
+                    <article class="timeline-item">
+                        <span class="timeline-year">2016—2022</span>
+                        <div><h3>Global recognition</h3><p>Merilis Your Name., Weathering With You, dan Suzume untuk penonton dunia.</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Elemen visual dan grafik -->
+        <section class="style-section section-padding">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 style-copy">
+                        <p class="eyebrow">VISUAL LANGUAGE</p>
+                        <h2>A signature<br><em>style.</em></h2>
+                        <p>Karya Makoto Shinkai memiliki pendekatan visual dan tema yang khas. Grafik berikut merupakan interpretasi editorial, bukan penilaian resmi.</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="chart-card">
+                            <h3>THE ELEMENTS OF HIS FILMS</h3>
+                            <div class="chart-container">
+                                <canvas id="styleChart" role="img" aria-label="Grafik elemen khas film Makoto Shinkai"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-
-    <section id="About" class="section-padding">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col text-center">
-                    <h2 class="display-5 underline mb-4">About Me</h2>
-                    <p class="text-muted mx-auto mb-0" style="max-width: 700px; line-height: 1.8;">
-                        <strong>Min Yoongi</strong>, yang lebih dikenal sebagai <strong>SUGA dari BTS dan Agust D</strong>, adalah seorang produser musik, penulis lagu, dan rapper global asal Korea Selatan. Memulai perjalanannya dari musisi underground di Daegu, ia kini telah berkembang menjadi salah satu kreator musik paling berpengaruh di industri musik internasional.
-                    </p>
-                </div>
-            </div>
-            <div class="row g-5 mb-5 align-items-center">
-                <div class="col-lg-5">
-                    <h3 class="fw-bold mb-4">Riwayat Pendidikan</h3>
-
-                    <div class="education-timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-marker"><i class="bi bi-mortarboard-fill"></i></div>
-                            <div class="timeline-content">
-                                <h5 class="fw-bold mb-1">SD Daegu Taejeon</h5>
-                                <p class="text-muted mb-1">2000 - 2006</p>
-                                <a href="https://maps.app.goo.gl/RHWmwpBwYJ2kUzj5A" target="_blank"
-                                    class="btn btn-sm btn-maps-link">
-                                    <i class="bi bi-geo-alt me-1"></i>Lihat Lokasi
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"><i class="bi bi-mortarboard-fill"></i></div>
-                            <div class="timeline-content">
-                                <h5 class="fw-bold mb-1">SMP Gwaneum</h5>
-                                <p class="text-muted mb-1">2006 - 2009</p>
-                                <a href="https://maps.app.goo.gl/pWyoWigHzTB3pLgC6" target="_blank"
-                                    class="btn btn-sm btn-maps-link">
-                                    <i class="bi bi-geo-alt me-1"></i>Lihat Lokasi
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"><i class="bi bi-mortarboard-fill"></i></div>
-                            <div class="timeline-content">
-                                <h5 class="fw-bold mb-1">SMA Kangbuk</h5>
-                                <p class="text-muted mb-1">2009 - 2010</p>
-                                <a href="https://maps.app.goo.gl/ig9Evhr7M3iZ9M9WA" target="_blank"
-                                    class="btn btn-sm btn-maps-link">
-                                    <i class="bi bi-geo-alt me-1"></i>Lihat Lokasi
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"><i class="bi bi-mortarboard-fill"></i></div>
-                            <div class="timeline-content">
-                                <h5 class="fw-bold mb-1">SMK Apgujeong</h5>
-                                <p class="text-muted mb-1">2010 - 2013</p>
-                                <a href="https://maps.app.goo.gl/eaTM2nkVKSVKEx747" target="_blank"
-                                    class="btn btn-sm btn-maps-link">
-                                    <i class="bi bi-geo-alt me-1"></i>Lihat Lokasi
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker active"><i class="bi bi-mortarboard-fill"></i></div>
-                            <div class="timeline-content">
-                                <h5 class="fw-bold mb-1">Global Cyber University</h5>
-                                <p class="text-muted mb-1">2013 - 2019</p>
-                                <a href="https://maps.app.goo.gl/EqH16Cv9dZLqKEJH9" target="_blank"
-                                    class="btn btn-sm btn-maps-link">
-                                    <i class="bi bi-geo-alt me-1"></i>Lihat Lokasi
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"><i class="bi bi-mortarboard-fill"></i></div>
-                            <div class="timeline-content">
-                                <h5 class="fw-bold mb-1">Hanyang Cyber University</h5>
-                                <p class="text-muted mb-1">2019 - now</p>
-                                <p class="small text-muted">S2-Pascasarjana</p>
-                                <span class="badge bg-dark mb-2">Currently Studying</span><br>
-                                <a href="https://maps.app.goo.gl/aTmwFx6FHZKRFWBn6" target="_blank"
-                                    class="btn btn-sm btn-maps-link">
-                                    <i class="bi bi-geo-alt me-1"></i>Lihat Lokasi
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="dashboard-card p-4">
-                        <h5 class="fw-bold mb-4 text-center">Grapik Skill</h5>
-                        <div class="chart-container"
-                            style="position: relative; height: 350px; width: 100%; max-width: 500px; margin: 0 auto;">
-                            <canvas id="skillsChart" role="img" aria-label="Grafik tingkat kemampuan"></canvas>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="contact">
-        <div class="container">
-            <div class="contact-card reveal">
-                <div class="text-center mb-4">
-                    <h2>Hubungi Saya</h2>
-                    <p class="text-muted">
-                        Punya pertanyaan atau ide? Kirim pesan kepada saya.
-                    </p>
+        <!-- Formulir kontak -->
+        <section class="contact-section section-padding" id="contact">
+            <div class="container">
+                <div class="section-heading contact-heading text-center">
+                    <p class="eyebrow">GET IN TOUCH</p>
+                    <h2>Let's start a <em>conversation.</em></h2>
+                    <p class="section-lead">Punya pertanyaan atau ingin berbagi cerita tentang karya Makoto Shinkai? Kirim pesan melalui formulir di bawah ini.</p>
                 </div>
 
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputName4">Nama</label>
-                            <input type="text"
-                                class="form-control"
-                                id="inputName4"
-                                placeholder="Nama kamu"
-                                required>
-                        </div>
-
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email"
-                                class="form-control"
-                                id="inputEmail4"
-                                placeholder="nama@email.com"
-                                required>
+                <div class="contact-card row">
+                    <div class="col-lg-5 contact-info">
+                        <p class="eyebrow light">CONTACT INFORMATION</p>
+                        <h3>Stories are better when they're shared.</h3>
+                        <p>Website ini dibuat sebagai portfolio fan-made untuk tujuan edukasi dan apresiasi terhadap karya Makoto Shinkai.</p>
+                        <div class="contact-detail"><i class="bi bi-envelope"></i><span>Gunakan formulir untuk mengirim pesan</span></div>
+                        <div class="contact-detail"><i class="bi bi-globe2"></i><span>Makoto Shinkai Fan Portfolio</span></div>
+                        <div class="contact-social">
+                            <span>EXPLORE MORE</span>
+                            <a href="https://www.shinkaiworks.com/" target="_blank" rel="noopener noreferrer">OFFICIAL WORKS <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="inputMessage">Pesan</label>
-                        <textarea class="form-control"
-                                id="inputMessage"
-                                placeholder="Tuliskan pesan kamu..."
-                                required></textarea>
+                    <div class="col-lg-7 contact-form-wrap">
+                        <p class="form-intro">Isi detail di bawah ini untuk menyiapkan pesan. Semua kolom bertanda <span>*</span> wajib diisi.</p>
+                        <form id="contactForm" class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="contactName">Your Name</label>
+                                    <input class="form-control" id="contactName" name="name" type="text" placeholder="Masukkan nama kamu" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="contactEmail">Email Address</label>
+                                    <input class="form-control" id="contactEmail" name="email" type="email" placeholder="nama@email.com" required>
+                                </div>
+                                <div class="col-12 form-group">
+                                    <label for="contactSubject">Subject</label>
+                                    <select class="form-control" id="contactSubject" name="subject" required>
+                                        <option value="" selected disabled>Pilih subjek pesan</option>
+                                        <option>General Message</option>
+                                        <option>Film Discussion</option>
+                                        <option>Portfolio Feedback</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 form-group">
+                                    <label for="contactMessage">Your Message</label>
+                                    <textarea class="form-control" id="contactMessage" name="message" rows="5" placeholder="Tuliskan pesan kamu di sini..." required></textarea>
+                                </div>
+                                <div class="col-12 d-flex flex-column flex-sm-row align-items-sm-center">
+                                    <button class="btn btn-contact-submit" type="submit">SEND MESSAGE <i class="bi bi-arrow-right"></i></button>
+                                    <span class="form-note">Formulir demo · Pesan tidak dikirim otomatis</span>
+                                </div>
+                                <div class="col-12"><p id="formStatus" class="form-status" role="status" aria-live="polite"></p></div>
+                            </div>
+                        </form>
                     </div>
-
-                    <button type="submit" class="btn btn-primary">
-                        Kirim Pesan
-                    </button>
-                </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-
-    
-   <footer class="footer-section py-5">
-        <div class="container text-center">
-            <div class="mb-4">
-                <a href="#Home" class="text-decoration-none">
-                    <h3 class="fw-bold text-white mb-0">Agust D<span style="color: var(--silver-sand);">.</span></h3>
-                </a>
-            </div>
-            <div class="social-links mb-4">
-                <a href="https://www.instagram.com/gabriellenya" class="social-icon" title="Instagram"><i
-                        class="bi bi-instagram"></i></a>
-                <a href="#" class="social-icon" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="https://github.com/gabriellenya" class="social-icon" title="GitHub"><i
-                        class="bi bi-github"></i></a>
-                <a href="https://wa.me/085702009655" class="social-icon" title="WhatsApp"><i
-                        class="bi bi-whatsapp"></i></a>
-            </div>
-            <p class="text-muted-light mb-0 small">
-                &copy; Dwcita
-            </p>
+    <footer class="site-footer">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <a class="brand" href="#home">
+                <img class="brand-avatar" src="assets/img/ms.jpg" alt="">
+                <span>MAKOTO SHINKAI<small>CINEMATIC PORTFOLIO</small></span>
+            </a>
+            <p class="mb-0">Fan-made portfolio for educational purposes · © 2026</p>
+            <a class="back-top" href="#home">BACK TO TOP ↑</a>
         </div>
     </footer>
 
-
-    <script>
-       document.addEventListener("DOMContentLoaded", function () {
-            const canvas = document.getElementById("skillsChart");
-
-            if (!canvas || typeof Chart === "undefined") return;
-
-            const ctx = canvas.getContext("2d");
-
-            // Gradasi abu-abu
-            const gradient = ctx.createLinearGradient(0, 0, 0, 320);
-            gradient.addColorStop(0, "#292C36");
-            gradient.addColorStop(0.5, "#848A98");
-            gradient.addColorStop(1, "#BDC2C7");
-
-            new Chart(ctx, {
-                type: "bar",
-                data: {
-                labels: [
-                    "SongWriter",
-                    "Dance",
-                    "Code",
-                    "Music",
-                    "Basket",
-                    "Marry You"
-                ],
-                datasets: [{
-                    label: "Tingkat Kemampuan",
-                    data: [80, 90, 90, 80, 88, 100],
-                    backgroundColor: gradient,
-                    borderRadius: 9,
-                    borderSkipped: false,
-                    barPercentage: 0.58,
-                    categoryPercentage: 0.75
-                }]
-                },
-                options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                    display: false
-                    },
-                    tooltip: {
-                    backgroundColor: "#292C36",
-                    titleColor: "#ffffff",
-                    bodyColor: "#ffffff",
-                    callbacks: {
-                        label: function (context) {
-                        return context.parsed.y + "%";
-                        }
-                    }
-                    }
-                },
-                scales: {
-                    y: {
-                    beginAtZero: true,
-                    max: 100,
-                    ticks: {
-                        stepSize: 10,
-                        callback: function (value) {
-                        return value + "%";
-                        },
-                        color: "#626A78"
-                    },
-                    grid: {
-                        color: "#E0E3E8"
-                    },
-                    border: {
-                        display: false
-                    }
-                    },
-                    x: {
-                    ticks: {
-                        color: "#626A78",
-                        maxRotation: 15,
-                        minRotation: 0
-                    },
-                    grid: {
-                        display: false
-                    },
-                    border: {
-                        color: "#BDC2C7"
-                    }
-                    }
-                }
-                }
-            });
-        });
-
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="assets/js/asset.js"></script>
 </body>
-
 </html>

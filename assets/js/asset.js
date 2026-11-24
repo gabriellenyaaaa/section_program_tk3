@@ -1,107 +1,107 @@
-// document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
+    var menuButton = document.querySelector(".navbar-toggler");
+    var menu = document.getElementById("mainNav");
 
-//     // Area notifikasi
-//     var notificationArea = document.getElementById("notification-area");
+    if (menuButton && menu) {
+        menuButton.addEventListener("click", function () {
+            var isOpen = menu.classList.toggle("show");
+            menuButton.setAttribute("aria-expanded", isOpen);
+        });
 
-//     if (!notificationArea) {
-//         notificationArea = document.createElement("div");
-//         notificationArea.id = "notification-area";
-//         notificationArea.setAttribute("aria-live", "polite");
-//         notificationArea.setAttribute("aria-atomic", "false");
-//         document.body.appendChild(notificationArea);
-//     }
+        menu.querySelectorAll(".nav-link, .nav-cta").forEach(function (link) {
+            link.addEventListener("click", function () {
+                menu.classList.remove("show");
+                menuButton.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
 
-//     // Fungsi notifikasi
-//     function showNotification(message, type) {
-//         var notification = document.createElement("div");
-//         notification.className =
-//             "custom-notification " + (type || "success");
+    var canvas = document.getElementById("styleChart");
+    if (canvas && typeof Chart !== "undefined") {
+        var context = canvas.getContext("2d");
+        var gradient = context.createLinearGradient(0, 0, 0, 320);
+        gradient.addColorStop(0, "#368bc0");
+        gradient.addColorStop(1, "#9bd8f5");
 
-//         var text = document.createElement("p");
-//         text.className = "notification-message";
-//         text.textContent = message;
+        new Chart(context, {
+            type: "bar",
+            data: {
+                labels: ["Langit & cahaya", "Hujan", "Perjalanan", "Kenangan", "Hubungan"],
+                datasets: [{
+                    label: "Elemen visual",
+                    data: [95, 82, 88, 90, 85],
+                    backgroundColor: gradient,
+                    borderRadius: 4,
+                    borderSkipped: false,
+                    barPercentage: 0.58,
+                    categoryPercentage: 0.75
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: "#102b49",
+                        callbacks: {
+                            label: function (item) {
+                                return item.parsed.y + "%";
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20,
+                            callback: function (value) {
+                                return value + "%";
+                            },
+                            color: "#a5b4c3"
+                        },
+                        grid: {
+                            color: "rgba(165, 180, 195, 0.18)"
+                        },
+                        border: {
+                            display: false
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: "#a5b4c3",
+                            maxRotation: 15,
+                            minRotation: 0
+                        },
+                        grid: {
+                            display: false
+                        },
+                        border: {
+                            color: "#40556b"
+                        }
+                    }
+                }
+            }
+        });
+    }
 
-//         var close = document.createElement("button");
-//         close.className = "notification-close";
-//         close.type = "button";
-//         close.setAttribute("aria-label", "Tutup notifikasi");
-//         close.textContent = "\u00d7";
+    var contactForm = document.getElementById("contactForm");
+    var formStatus = document.getElementById("formStatus");
 
-//         notification.appendChild(text);
-//         notification.appendChild(close);
-//         notificationArea.appendChild(notification);
+    if (contactForm && formStatus) {
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-//         var timeout;
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return;
+            }
 
-//         function dismiss() {
-//             clearTimeout(timeout);
-//             notification.classList.add("hide");
-
-//             notification.addEventListener("animationend", function () {
-//                 notification.remove();
-//             }, { once: true });
-//         }
-
-//         close.addEventListener("click", dismiss);
-
-//         timeout = setTimeout(dismiss, 4000);
-//     }
-
-
-//     // Animasi elemen saat masuk ke viewport
-//     var revealElements = document.querySelectorAll(".reveal");
-
-//     if ("IntersectionObserver" in window) {
-//         var observer = new IntersectionObserver(function (entries) {
-//             entries.forEach(function (entry) {
-//                 if (entry.isIntersecting) {
-//                     entry.target.classList.add("visible");
-//                     observer.unobserve(entry.target);
-//                 }
-//             });
-//         }, {
-//             threshold: 0.12
-//         });
-
-//         revealElements.forEach(function (element) {
-//             observer.observe(element);
-//         });
-//     } else {
-//         revealElements.forEach(function (element) {
-//             element.classList.add("visible");
-//         });
-//     }
-
-
-//     // Tombol detail Services
-//     document.querySelectorAll(".btn-detail").forEach(function (button) {
-//         button.addEventListener("click", function () {
-//             showNotification(
-//                 button.getAttribute("data-detail") ||
-//                 "Informasi layanan belum tersedia.",
-//                 "success"
-//             );
-//         });
-//     });
-
-
-//     // Notifikasi untuk formulir kontak
-//     var form = document.querySelector("#contact form");
-
-//     if (form) {
-//         form.addEventListener("submit", function (event) {
-//             event.preventDefault();
-
-//             if (!form.checkValidity()) {
-//                 form.reportValidity();
-//                 return;
-//             }
-
-//             showNotification(
-//                 "Formulir berhasil divalidasi. Hubungkan formulir ke backend atau layanan email untuk benar-benar mengirim pesan.",
-//                 "success"
-//             );
-//         });
-//     }
-
-// });
+            formStatus.textContent = "Formulir tervalidasi. Untuk mengirim pesan, hubungkan formulir ke layanan email atau backend.";
+        });
+    }
+});
