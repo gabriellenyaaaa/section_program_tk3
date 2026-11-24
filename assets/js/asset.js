@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
     var contactForm = document.getElementById("contactForm");
     var formStatus = document.getElementById("formStatus");
 
@@ -29,7 +28,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            formStatus.textContent = "Formulir tervalidasi. Untuk mengirim pesan, hubungkan formulir ke layanan email atau backend.";
+            formStatus.textContent = "Mengirim pesan...";
+
+            var formData = new FormData(contactForm);
+            formData.append("ajax_contact", "1");
+
+            fetch("contact.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                formStatus.textContent = data.message;
+                if (data.status === "success") {
+                    contactForm.reset();
+                }
+            })
+            .catch(function () {
+                formStatus.textContent = "Terjadi kesalahan saat menghubungi server.";
+            });
         });
     }
 });
