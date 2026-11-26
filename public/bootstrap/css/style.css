@@ -1,0 +1,171 @@
+body {
+    background-color: #e8edf2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    min-height: 100vh;
+    padding: 40px 15px;
+}
+
+.main-container {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.app-title {
+    font-weight: 700;
+    color: #3c4043;
+    font-size: 1.8rem;
+}
+
+.title-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fde9a2;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    margin-left: 8px;
+}
+
+/* Bar Tambah Tugas (Pill Shape) */
+.add-pill-box {
+    background-color: #f3f5f7;
+    border: 1px solid #d5dce2;
+    border-radius: 50px;
+    padding: 5px 6px 5px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.add-pill-box input {
+    border: none;
+    background: transparent;
+    flex: 1;
+    outline: none;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.add-pill-box input::placeholder {
+    color: #9aa3ab;
+    font-style: italic;
+}
+
+.btn-pill-add {
+    background-color: #df4d3b;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 26px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-pill-add:hover {
+    background-color: #c93d2c;
+}
+
+.extra-inputs {
+    background-color: #f4f6f8;
+    border-radius: 16px;
+    padding: 12px 18px;
+    margin-top: 10px;
+}
+
+/* Kotak Daftar Tugas */
+.list-board {
+    background-color: #f4f6f8;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.date-label {
+    color: #df4d3b;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 6px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/* Item Tugas (Pill Row) */
+.task-pill {
+    background-color: #d6dce2;
+    border-radius: 50px;
+    padding: 10px 18px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: opacity 0.2s;
+}
+
+.task-pill.completed {
+    background-color: #dfe4e8;
+}
+
+/* Lingkaran Checklist Kiri */
+.check-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #e08279;
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    color: #ffffff;
+    font-size: 0.75rem;
+}
+
+.check-circle.checked {
+    background-color: #df4d3b;
+    border-color: #df4d3b;
+}
+
+.task-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #333333;
+    text-align: center;
+}
+
+.task-pill.completed .task-text {
+    text-decoration: line-through;
+    color: #8c959e;
+    font-weight: 400;
+}
+
+.task-desc {
+    font-size: 0.78rem;
+    color: #6c757d;
+    text-align: center;
+}
+
+/* Tombol Sampah Kanan */
+.btn-trash {
+    background: transparent;
+    border: none;
+    color: #212529;
+    font-size: 1.05rem;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.task-pill.completed .btn-trash {
+    color: #7d858d;
+}
+
+.btn-trash:hover {
+    color: #df4d3b;
+}
