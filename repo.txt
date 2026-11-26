@@ -1,0 +1,6 @@
+Link Repository : https://github.com/gabriellenyaaaa/section_program_tk3.git
+Nama Branch : Web-Laravel
+
+------------------------------------------
+
+- belum tersedia database.sql karena web ini masih bersifat statis
