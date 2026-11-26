@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                datasets: [{
                     label: "Elemen Visual",
-                    data: [60, 75, 80, 70, 65],
+                    data: [100, 75, 80, 70, 65],
 
                     backgroundColor: gradient,
                     borderRadius: 5,
