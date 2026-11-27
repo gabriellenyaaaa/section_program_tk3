@@ -1,0 +1,33 @@
+Nama : Gabriella Enya Setya Gratias
+NIM  : 20246030
+Repo : https://github.com/gabriellenyaaaa/section_program_tk3.git
+
+---------------------------------------------------
+Account
+
+usn : Budi
+pw : dosen123
+
+usn : Sooha
+pw : sooha123
+
+usn : Heli
+pw : heli1234
+
+usn : Jaan
+pw : jaan1234
+
+usn : Jino
+pw : jino1234
+
+usn : Solon
+pw : solon123
+
+usn : Shion
+pw : shion123
+
+usn : Jakah
+pw : jakah123
+
+usn : Noa
+pw : noa12345
